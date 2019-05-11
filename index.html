@@ -1,51 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Don Cushing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Weather plots display using html-css.">
+    <meta name="author" content="Don Cushing">
+    <title>Main Page</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
-<img src= "C:\Users\donis\Desktop\RealTalk.png" alt = "Don Photo">
-<br>
-<p>It's been tricky...</p>
-<p>I must keep my personality a secret, or it would be too easy for you to predict me, and I would lose the ability to manifest my unholy will!</p>
-<ul>
-    <li>github.com/therealdcushing</li>
-    <li>instagram.com/therealdcushing</li>
-    <li>LinkedIn.com/in/don-cushing-60229bb6/</li>
-</ul>
-    <table>
-        <thead>
-            <tr><th colspan="4" bgcolor = "silver">Generosities</th></tr>
-            <tr>
-                <th>Movies</th>
-                <th>Songs</th>
-                <th>Books</th>
-                <th>Activities</th>
-            </tr>    
-        </thead>
-        <tbody>
-            <tr>
-                <td>Starship Troopers</td>
-                <td>Wild Wild West by Will Smith</td>
-                <td>Meditations by Marcus Auerelius</td>
-                <td>Being Alpha</td>
-            </tr>
-            <tr>
-                <td>I love you bro</td>
-                <td>Home of the Brave by Hammerfall</td>
-                <td>Game of Thrones by George R.R. Martin</td>
-                <td>Making noise and taking up space</td>
-            </tr>
-           <tr>
-                <td></td>
-                <td>Silent Dream by Rhapsody of Fire</td>
-                <td>I Ching: Wilhelm Translation</td>
-                <td>Writing in my journal</td>
-            </tr>
-        </tbody>
-    </table>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#">Don Cushing</a>
+              
+                <!-- Links -->
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                          Plots
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="MaxTemp.html">Temperature</a>
+                            <a class="dropdown-item" href="Humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="WindSpeed.html">Windspeed</a>
+                            <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
+                        </div>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Comparisons.html">Comparison</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="DataPage.html">Data</a>
+                  </li>
+                      
+                  <!-- Dropdown -->
+                  <!-- Make a custom stylesheet that has cards of predefined length so they fit neatly -->
+                </ul>
+            </nav>
+
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2> Summary: Latitude vs Weather Variables</h2>
+        </div>
+        <div class="col-md-2">
+            <h3>Visualizations</h3>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <article>
+                <a target="_blank" href="MaxTemp.html">
+                <img src="Assets/Max_temp.png" alt="Latitude vs Max Temp" width="80%">
+                </a>
+            </article>
+        </div>
+        
+        <div class="col-md-4">
+            <p>
+                <em> This is a summary of the Weather anaylsis for 543 cities in varying latitudes covering the world. The OpenWeatherMap API
+                        was used to determine weather realated information like Maximum temperature, Humidity,  cloudiness, Windspeed. After assembling the dataset
+                        pandas was used to convert to dataframes and perform needed operations. Matplotlib and Seaborn was then used to plot the results of the analysis 
+                        of latitude versus the other weather variables. This site provides the data and the visualizations created as part of the analysis. Observations 
+                        and explanations of trends and correlations are also included. </em>
+            </p>
+        </div>
+
+        <div class="col-md-2">
+            <h6> Latitude vs Max Temp </h6>
+            <a target="_blank" href="MaxTemp.html">
+            <img src="Assets/Max_temp.png" alt="Latitude vs Max Temp" width="80%">
+            </a>
+        </div>
+
+        <div class="col-md-2">
+            <h6> Latitude vs Humidity</h6>
+        <a target="_blank" href="Humidity.html">
+        <img src="Assets/Humidity.png" alt="Latitude vs Humidity" width="80%">
+        </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 col-md-8">
+        </div>
+        <div class="col-lg-2 col-md-2">
+            <h6> Latitude vs Wind Speed</h6>
+        <a target="_blank" href="Windspeed.html">
+        <img src="Assets/Wind_Speed.png" alt="Latitude vs Wind Speed" width=80%>
+        </a>
+        </div>
+
+        <div class="col-lg-2 col-md-2>">
+            <h6> Latitude vs Cloudiness</h6>
+        <a target="_blank" href="Cloudiness.html">
+        <img src="Assets/Cloudiness.png" alt="Latitude vs Cloudiness" width="80%">
+        </a>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
+
+
+
+
+
+
